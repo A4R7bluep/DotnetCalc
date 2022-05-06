@@ -37,7 +37,6 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox = new System.Windows.Forms.TextBox();
             this.buttonDivision = new System.Windows.Forms.Button();
             this.buttonMultiplication = new System.Windows.Forms.Button();
             this.buttonSubtraction = new System.Windows.Forms.Button();
@@ -45,6 +44,8 @@
             this.buttonDot = new System.Windows.Forms.Button();
             this.buttonAddition = new System.Windows.Forms.Button();
             this.buttonEnter = new System.Windows.Forms.Button();
+            this.textBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button9
@@ -146,16 +147,6 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox
-            // 
-            this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.textBox.Location = new System.Drawing.Point(15, 13);
-            this.textBox.Name = "textBox";
-            this.textBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox.Size = new System.Drawing.Size(422, 35);
-            this.textBox.TabIndex = 10;
-            this.textBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // buttonDivision
             // 
             this.buttonDivision.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
@@ -233,11 +224,33 @@
             this.buttonEnter.UseVisualStyleBackColor = true;
             this.buttonEnter.Click += new System.EventHandler(this.buttonEnter_Click);
             // 
+            // textBox
+            // 
+            this.textBox.AccessibleName = "textBox";
+            this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.textBox.Location = new System.Drawing.Point(15, 13);
+            this.textBox.Name = "textBox";
+            this.textBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox.Size = new System.Drawing.Size(422, 35);
+            this.textBox.TabIndex = 10;
+            this.textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(98, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "label1";
+            // 
             // outputText
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 378);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonEnter);
             this.Controls.Add(this.buttonAddition);
             this.Controls.Add(this.buttonDot);
@@ -272,7 +285,6 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.Button buttonDivision;
         private System.Windows.Forms.Button buttonMultiplication;
         private System.Windows.Forms.Button buttonSubtraction;
@@ -280,6 +292,8 @@
         private System.Windows.Forms.Button buttonDot;
         private System.Windows.Forms.Button buttonAddition;
         private System.Windows.Forms.Button buttonEnter;
+        private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.Label label1;
     }
 }
 
