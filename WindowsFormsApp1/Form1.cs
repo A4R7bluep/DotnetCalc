@@ -24,54 +24,34 @@ namespace WindowsFormsApp1
 
         int mather()
         {
-            string[] operations = {"+", "-", "*", "/", "="};
-            string[] numbers = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."};
+            string[] operations = {"+", "-", "*", "/"};
 
             string number1 = "";
             string number2 = "";
+            string operation = "";
             
-            string x = "";
+            string calculationStr = "";
 
             for (int i = 0; i < calculation.Count; i++)
             {
-                x += calculation[i];
-            }
-            //label1.Text = x.Replace(" - ", "");
-            label1.Text = x.IndexOf("-").ToString();
-
-            // First Number
-            for (int i = 0; i < calculation.Count; i++)
-            {
-                for (int j = 0; j < numbers.Length; j++)
-                {
-                    if (calculation[i] == numbers[j])
-                    {
-                        number1 += calculation[i];
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
+                calculationStr += calculation[i];
             }
 
-            // Second Number
+            number1 = calculationStr.Substring(0, calculationStr.IndexOf(" "));
+            number2 = calculationStr.Substring(calculationStr.IndexOf(" ") + 3);
+
             for (int i = 0; i < calculation.Count; i++)
             {
                 for (int j = 0; j < operations.Length; j++)
                 {
                     if (calculation[i] == operations[j])
                     {
-                        break;
-                    }
-                    else
-                    {
-                        number2 += calculation[i];
+                        operation = operations[j];
                     }
                 }
             }
 
-            //label1.Text = number1 + ", " + number2;
+            label1.Text = operation;
 
             return 0;
         }
